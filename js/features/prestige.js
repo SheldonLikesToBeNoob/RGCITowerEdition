@@ -14,7 +14,6 @@ CURRENCIES.prestige = {
         let x = player.level.sub(31).pow_base(b).mul(player.grass.max(1).root(15)).mul(10)
 
         x = x.mul(upgradeEffect("grass",5)).mul(upgradeEffect('crystal',4)).mul(upgradeEffect('perks',7)).mul(upgradeEffect('platinum',4))
-        .mul(getAccomplishmentBonus(3)).mul(tmp.charger_bonus[4]??1).mul(upgradeEffect('refinery','1d')).mul(upgradeEffect('momentum','1g'))
 
         return x.floor()
     },
@@ -40,8 +39,6 @@ RESETS.prestige = {
 
     success() {
         player.prestige.times++
-
-        ACCOM.check('prestige')
     },
     doReset() {
         player.grass = E(0)
