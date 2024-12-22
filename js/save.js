@@ -101,8 +101,6 @@ function getPlayerData() {
     for (let id in LISTS.currencies) s.lists.currencies[id] = [false,true];
     for (let id in LISTS.levels) s.lists.levels[id] = false;
 
-    for (let i in ACCOM.ctn) s.accomplishments[i] = E(0);
-
     return s
 }
 
